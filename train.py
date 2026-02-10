@@ -140,7 +140,10 @@ def main():
         # Save best model
         if test_accuracy > best_accuracy:
             best_accuracy = test_accuracy
-            torch.save(model.state_dict(), 'best_model.pth')
+            # Create checkpoints directory if it doesn't exist
+            import os
+            os.makedirs('checkpoints', exist_ok=True)
+            torch.save(model.state_dict(), 'checkpoints/best_model.pth')
             print(f'Best model saved with accuracy: {best_accuracy:.2f}%')
     
     print('\n' + '='*50)

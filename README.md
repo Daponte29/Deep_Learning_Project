@@ -19,16 +19,26 @@ This project implements a Convolutional Neural Network (CNN) using PyTorch to cl
 ```
 Deep_Learning_Project/
 ├── src/
+│   ├── __init__.py
 │   ├── models/          # Neural network models
+│   │   ├── __init__.py
 │   │   └── simple_cnn.py
 │   ├── data/            # Data loading utilities
+│   │   ├── __init__.py
 │   │   └── mnist_loader.py
 │   └── utils/           # Utility functions
+│       ├── __init__.py
 │       └── device.py
+├── tests/               # Unit tests
+│   ├── __init__.py
+│   └── test_model.py
 ├── train.py             # Training script
+├── inference.py         # Inference/prediction script
+├── example.py           # Quick example demonstration
 ├── config.py            # Configuration settings
 ├── requirements.txt     # Python dependencies
-└── README.md
+├── .gitignore           # Git ignore rules
+└── README.md            # This file
 ```
 
 ## Installation

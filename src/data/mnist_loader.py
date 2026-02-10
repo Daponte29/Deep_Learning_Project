@@ -3,13 +3,14 @@ import torch
 from torchvision import datasets, transforms
 
 
-def get_mnist_loaders(batch_size=64, data_dir='./data'):
+def get_mnist_loaders(batch_size=64, data_dir='./data', num_workers=2):
     """
     Get MNIST train and test data loaders.
     
     Args:
         batch_size (int): Batch size for data loaders. Default is 64.
         data_dir (str): Directory to store/load MNIST data. Default is './data'.
+        num_workers (int): Number of worker processes for data loading. Default is 2.
     
     Returns:
         tuple: (train_loader, test_loader)
@@ -41,7 +42,7 @@ def get_mnist_loaders(batch_size=64, data_dir='./data'):
         train_dataset,
         batch_size=batch_size,
         shuffle=True,
-        num_workers=2,
+        num_workers=num_workers,
         pin_memory=True
     )
     
@@ -49,7 +50,7 @@ def get_mnist_loaders(batch_size=64, data_dir='./data'):
         test_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2,
+        num_workers=num_workers,
         pin_memory=True
     )
     

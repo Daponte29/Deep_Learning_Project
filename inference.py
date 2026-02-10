@@ -93,7 +93,7 @@ def main():
     print('='*50)
     
     # Load model
-    model_path = 'best_model.pth'
+    model_path = 'checkpoints/best_model.pth'
     print(f'\nLoading model from {model_path}...')
     
     try:
